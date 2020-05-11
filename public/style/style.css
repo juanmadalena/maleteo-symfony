@@ -1,0 +1,403 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: Catamaran, sans-serif;
+}
+header{
+    width: 100%;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    padding-left: 2%;
+    background-color: rgb(255, 244, 224);
+}
+
+.logoMaleteo{
+    width: 70%;
+    height: auto;
+}
+.jumbotron{
+    background-image: url("/assets/img/jumbo@2x.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 82vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.jumbotronTexto{
+    background-color:rgba(0, 0, 0, 0.6);
+    width: 33vw;
+    height: 100%;
+    margin-right: 40%;
+    padding:2%;
+    
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.gana{
+    font-size: 45px;
+    text-align: center;
+    margin-bottom: 5%;
+}
+span{
+    font-weight: bold;
+}
+
+.apps-stores{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 90%;
+}
+.apps-stores img{
+    width: 95%;
+}
+.comoFunciona{
+width: 80%;
+margin-left: auto;
+margin-right: auto;
+text-align: center;
+}
+.comoFunciona-titulo{
+    text-align: center;
+    margin-top: 3vh;
+    font-size: 40px;
+    font-weight: bold;
+    color: orange;
+    margin-bottom: -3vh;
+}
+.paso{
+    width: 40%;
+    padding: 5%;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+.pasos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 5vh;
+
+}
+.paso-circulo{
+    width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background:linear-gradient(180deg,rgb(248, 204, 121),rgb(224, 146, 2));
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+    margin:0px auto;
+    padding:8%;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 3vh;
+    font-size: 20px;
+
+
+    /*
+    display:inline-block;
+    width:48px;
+    height:48px;
+    background: -webkit-gradient(linear, left top, left bottom,to rgb(248, 204, 121),from rgb(224, 146, 2));
+
+    */
+}
+.paso-titulo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10%;
+}
+
+.titulo-medio{
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.contacto{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 3vh 7vw;
+
+}
+
+
+.img-adaptable{
+    height: 75vh;
+}
+
+.formulario{
+    width: 400px;
+    height: 350px;
+    border: solid lightgray;
+    border-radius: 7px;
+    padding: 2%;
+}
+
+.campo-formulario{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+form > div{
+    width: 100%;
+}
+
+div > input {
+    width: 100%;
+}
+
+div > select {
+    width: 100%;
+}
+
+.privacidad{
+    margin-top: 2vh;
+    font-size: 14px;
+}
+
+button{
+    width: 40%;
+    padding: 2%;
+    border-radius: 5px;
+    border: none;    
+    background:linear-gradient(180deg,rgb(253, 220, 158),rgb(255, 179, 37));
+    font-weight: bold;
+}
+
+button:hover{
+    cursor: pointer;
+    background:linear-gradient(180deg,rgb(248, 204, 121),rgb(224, 146, 2));
+
+}
+
+a{
+    text-decoration: underline;
+    color: orange;
+    font-weight: bold;
+}
+
+label{
+    margin-bottom: 1%;
+    font-size: 18px;
+}
+
+
+
+.opiniones-titulo{
+    font-size: 40px;
+    font-weight: bold;
+    color: orange;
+}
+
+.opiniones{
+    text-align: center;
+    margin: 4vw auto;
+}
+
+.cajaGuardianes{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10vh;
+    
+}
+
+.guardian{
+    width: 30vw;
+    border: solid lightgrey;
+    padding: 2%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.nombreGuardian{
+    font-size: 18px;
+}
+.ubicacionGuardian{
+    font-size: 14px;
+}
+.opinionGuardian{
+    margin: 4%;
+}
+.cara{
+    width: 80px;
+    height: auto;
+    border-radius: 18%;
+    margin-top: -20%;   
+}
+
+footer{
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(255, 244, 224);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 14px;
+}
+
+/* MEDIA QUERIES */
+ 
+@media (max-width:1025px){
+ 
+    .jumbotron {
+    background-image: url("/assets/img/jumbo@1x.png");
+    }
+       
+    .jumbotronTexto{
+    width: 100vw;
+    margin-right: 0px;
+
+    }
+
+    .img-adaptable{
+        width: 80%;
+        height: auto;
+    }
+    .gana{
+        font-size: 60px;
+    }
+
+    .apps-stores img{
+        width: 40vw;
+    }
+
+    .pasos{
+        margin-top: 10vh;
+    }
+
+    .contacto{
+        padding:0 10%;
+    }
+    
+    .formulario{
+        width: 40vw ;
+        height: justify;
+    }
+
+    .comoFunciona-titulo{
+        margin-bottom: -8vw;
+        font-size: 30px;
+
+    }
+
+   }
+
+   @media (max-width:800px){
+    header{
+        padding: 0;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .jumbotron {
+        background-image: url("/assets/img/jumbomobile.png");
+        }
+    
+    .apps-stores{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .contacto-foto{
+        display: flex;
+        text-align: center;
+    }
+
+    .gana{
+        font-size: 35px;
+    }
+    .apps-stores img{
+        width: 45vw;
+    }
+    .apple-store{
+        margin-bottom: 2vh ;
+    }
+    .pasos{
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: none;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .paso{
+    width: 100%;
+    }
+
+    .paso-texto{
+        width: 100%;
+        text-align: center;
+    }
+
+    .contacto{
+        flex-direction: column;
+        margin: 0;
+        margin-top: 3vh;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .formulario{
+        width: 100%;
+        height: auto;
+        margin-top: 3vh;
+        padding:5%;
+    }
+
+    .privacidad{
+        font-size: 10px;
+    }
+
+    .opiniones-titulo{
+        font-size: 25px;
+        margin: 0 5vw;
+    }
+    
+    .guardian{
+        width: 90vw;
+        margin: 0 5vw ;
+        font-size: 20px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .cajaGuardianes{
+        overflow-x: auto;
+        width: auto;
+        margin: 0 5vw;
+        padding: 10vh 0;
+        justify-content: flex-start;
+    }
+
+    .cajaGuardianes div{
+        width: 70vw;
+        height: auto;
+    }
+
+    .opinionGuardian{
+        font-size: 14px;
+        padding: 20px;
+    }
+
+    }

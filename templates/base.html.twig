@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Maleteo!{% endblock %}</title>
+        {% block stylesheets %}
+        <link rel="stylesheet" href="style/style.css">
+        {% endblock %}
+    </head>
+    <body>
+    {% block header %}
+                <header>
+        <picture>
+            <a href="/maleteo"><img src="assets/img/logo.svg" alt="logoMaleteo" class="logoMaleteo"></a>
+        </picture>
+    </header>
+    {% endblock %}
+
+        {% block body %}
+
+    <section class="jumbotron">
+        <article class="jumbotronTexto">
+            <p class="gana"><span> Gana dinero</span> guardando equipaje a viajeros como tu</p>
+            <article class="apps-stores">
+                <picture>
+                    <img src="assets/img/app-store.svg" alt="app-store" class="apple-store">
+                </picture>
+                <picture>
+                    <img src="assets/img/google-play.svg" alt="google-play" class="google-play">
+                </picture>
+            </article>
+        </article>
+    </section>
+<section class="comoFunciona">
+        <article class="comoFunciona-titulo">
+            <p>¿Como funciona?</p>
+        </article>
+<article class="pasos">
+    <div class="paso">
+        <div class="paso-circulo">1</div>
+        <div class="paso-titulo">Date de alta</div>
+        <div class="paso-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cupiditate blanditiis labore ex ipsa animi aliquid quibusdam unde</div>
+    </div>
+    <div class="paso">
+        <div class="paso-circulo">2</div>
+        <div class="paso-titulo">Date de alta</div>
+        <div class="paso-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cupiditate blanditiis labore ex ipsa animi aliquid quibusdam unde</div>
+    </div>
+    <div class="paso">
+        <div class="paso-circulo">3</div>
+        <div class="paso-titulo">Date de alta</div>
+        <div class="paso-texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam cupiditate blanditiis labore ex ipsa animi aliquid quibusdam unde</div>
+    </div>
+    </article>
+</article>
+</section>
+
+<section class="contacto">
+
+    <article class="contacto-foto">
+        <picture>
+            <img class="img-adaptable" src="assets/img/iPhoneX@2x.png" alt="">
+        </picture>
+    </article>
+    <article class="formulario">
+       
+            <div class="campo-formulario">
+                <p class="titulo-medio">Solicita una demo</p>
+            </div>
+        {{form(form_leads)}}
+         
+            <div class="campo-formulario">
+   <p class="privacidad">Al enviar acepta nuestra <a href="">politica de privacidad</a></p>
+
+        </form> 
+    </article>
+    
+</section>
+
+    <section class="opiniones">
+        <article>
+            <p class="opiniones-titulo">Opiniones de otros guardianes</p>
+        </article>
+        <article class="cajaGuardianes">
+         {% for guardian in guardianes %}
+            <div class="guardian">
+
+                <div class="fotoGuardian">
+                    <picture>
+                        <img src="assets/img/guardian1" alt="" class="cara">
+                    </picture>
+                </div>
+               
+                <div class="nombreGuardian">
+                    <p>{{guardian.autor}}</p>
+                </div>
+                <div class="ubicacionGuardian">
+                    <p>{{guardian.ciudad}}</p>
+                </div>
+                <div class="opinionGuardian">
+                    <p>-{{guardian.comentario}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </article>
+    </section>
+        {% endblock %}
+  
+    {% block footer %}
+        <footer>
+        <picture>
+            <img src="assets/img/logo.svg" alt="" class="logoMaleteo">
+            <p>Juan Madalena <span class="icono">&#9996;</span></p>
+        </picture>
+    </footer>
+    {% endblock %}
+
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

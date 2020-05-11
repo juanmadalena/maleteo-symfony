@@ -1,0 +1,9 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+<ul>
+{% for nombre in nombres %}
+<li> {{nombre.nombre}} {{nombre.email}} {{nombre.ciudad}}</li>
+{% endfor %}
+</ul>
+{% endblock %}
