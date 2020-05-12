@@ -1,8 +1,12 @@
 {% extends "base.html.twig" %}
+        {% block stylesheets %}
+        {{ parent() }}
+        <link rel="stylesheet" href="style/thanks.css">
+        {% endblock %}
 
 {% block body %}
-
+<div class="contenedor">
 <h1>Gracias por solicitar la demo</h1>
 <h3>en breve recibiras un email</h3>
-
+</div>
 {% endblock %}

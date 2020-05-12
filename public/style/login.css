@@ -1,0 +1,43 @@
+*{
+margin: 0;
+padding: 0;
+text-align: center;
+}
+.caja{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2vh;
+}
+.pass{
+    width: 30%;
+    height: 3vh;
+
+}
+.email{
+    width: 30%;
+    margin-bottom: 2vh;
+    height: 3vh;
+}
+label{
+    font-weight: bold;
+}
+h1{
+    margin-top: 5vh;
+    margin-bottom: 2vh;
+}
+button{
+    width: 20%;
+    height: 7vh;
+}
+
+.logout{
+    position: absolute;
+    margin-top: 80vh;
+
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+}

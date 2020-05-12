@@ -1,9 +1,23 @@
 {% extends "base.html.twig" %}
 
+        {% block stylesheets %}
+        {{ parent() }}
+        <link rel="stylesheet" href="style/solicitudes.css">
+        {% endblock %}
 {% block body %}
-<ul>
+<table>
+<tr>
+<th> Nombre</th>
+<th> Email</th>
+<th> Ciudad</th>
+</tr>
+<tr>
 {% for nombre in nombres %}
-<li> {{nombre.nombre}} {{nombre.email}} {{nombre.ciudad}}</li>
+<td> <p> <span>{{nombre.nombre}}</span></p> </td>
+<td> <p> <span>{{nombre.email}}</span></p> </td>
+<td> <p> <span>{{nombre.ciudad}}</span> </p></td>
+
 {% endfor %}
-</ul>
+</tr>
+</table>
 {% endblock %}

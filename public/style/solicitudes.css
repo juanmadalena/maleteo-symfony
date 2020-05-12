@@ -1,0 +1,28 @@
+
+*{
+    text-align: center;
+
+}
+.lista{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+li{
+    margin: 1vh 0;
+    font-size: 20px;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+}
+.linkSolicitud{
+    display: none;
+}
+
+.login{
+    margin-left: 50vw;
+}
+table{
+
+}
