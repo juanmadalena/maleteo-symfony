@@ -1,0 +1,11 @@
+{% extends "base.html.twig" %}
+
+        {% block stylesheets %}
+        {{ parent() }}
+        <link rel="stylesheet" href="style/opinion.css">
+        {% endblock %}
+{% block body %}
+<div class="cajaLogin">
+{{form(opinionForm)}}
+</div>
+{% endblock %}

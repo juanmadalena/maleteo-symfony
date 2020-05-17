@@ -5,19 +5,25 @@
         <link rel="stylesheet" href="style/solicitudes.css">
         {% endblock %}
 {% block body %}
+<div class="tabla">
 <table>
+<thead>
 <tr>
 <th> Nombre</th>
 <th> Email</th>
 <th> Ciudad</th>
+<th></th>
 </tr>
-<tr>
+</thead>
 {% for nombre in nombres %}
-<td> <p> <span>{{nombre.nombre}}</span></p> </td>
-<td> <p> <span>{{nombre.email}}</span></p> </td>
-<td> <p> <span>{{nombre.ciudad}}</span> </p></td>
+<tr>
+<td> <span>{{nombre.nombre}}</span> </td>
+<td> <span>{{nombre.email}}</span></td>
+<td><span>{{nombre.ciudad}}</span></td>
+<td><a href="solicitudes/borrar/{{nombre.id}}"><img src="assets/img/borrar.png" class="borrar"></a></td>
 
-{% endfor %}
 </tr>
+{% endfor %}
 </table>
+</div>
 {% endblock %}

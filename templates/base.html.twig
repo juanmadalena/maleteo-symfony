@@ -14,19 +14,25 @@
         <picture>
             <a href="/maleteo"><img src="assets/img/logo.svg" alt="logoMaleteo" class="logoMaleteo"></a>
         </picture>
-<div class="solicitud">
+<div class="menu">
+        <ul>
         {% if is_granted('ROLE_ADMIN') %}
         
-            <a href="/solicitudes" class="linkSolicitud">Solicitudes</a>
+           <li> <a href="/solicitudes" class="linkSolicitud">Solicitudes</a></li>
         
         {% endif %}
-</div>
-        {% if is_granted('ROLE_USER') %}
-            <a href="/logout" class="login" >Salir</a>
-        {% else %}
-            <a href="/login" class="login" >Identificarse</a>
-        {% endif %}
 
+        {% if is_granted('ROLE_USER') %}
+         <li><a href="/opinion"> Opinion </a></li>
+
+         <li>   <a href="/logout" class="login" >Salir</a> </li>
+        {% else %}
+        
+        <li> <a href="/login" class="login" >Identificarse</a></li>
+        <li> <a href="/registro" class="registrarse" >Registrarse</a></li>
+        {% endif %}
+</ul>
+</div>
     </header>
     {% endblock %}
 

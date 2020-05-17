@@ -11,13 +11,7 @@
 }
 
 form{
-   margin-top: 1vh;
-   display: flex;
-   flex-direction: column;
-}
-
-h1{
-    text-align: center;
+   margin-top: 1vh
 }
 
 .m{
@@ -30,13 +24,19 @@ h1{
     width: 80px;
 }
 
-input, select{
+#opiniones_comentario, #opiniones_autor, #opiniones_ciudad{
     width: 40vw;
     height: 4vh;
     margin-top:4vh ;
     border: none;
     border-bottom: solid 3px rgb(255, 166, 0);
 }
+
+#opiniones_comentario{
+    height: 10vh;
+    border-left:solid 3px orange;
+}
+
 button{
     width: 35vw;
     margin-top: 3vh;

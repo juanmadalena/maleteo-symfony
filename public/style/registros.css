@@ -12,12 +12,6 @@
 
 form{
    margin-top: 1vh;
-   display: flex;
-   flex-direction: column;
-}
-
-h1{
-    text-align: center;
 }
 
 .m{
@@ -37,7 +31,8 @@ input, select{
     border: none;
     border-bottom: solid 3px rgb(255, 166, 0);
 }
-button{
+
+#registro_Enviar{
     width: 35vw;
     margin-top: 3vh;
     margin-left: 2vw;

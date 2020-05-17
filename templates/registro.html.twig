@@ -1,0 +1,49 @@
+{% extends "base.html.twig" %}
+
+        {% block stylesheets %}
+        {{ parent() }}
+        <link rel="stylesheet" href="style/registros.css">
+        {% endblock %}
+    {% block header %}
+                <header>
+        <picture>
+            <a href="/maleteo"><img src="assets/img/logo.svg" alt="logoMaleteo" class="logoMaleteo"></a>
+        </picture>
+<div class="solicitud">
+        {% if is_granted('ROLE_ADMIN') %}
+        
+            <a href="/solicitudes" class="linkSolicitud">Solicitudes</a>
+        
+        {% endif %}
+</div>
+        {% if is_granted('ROLE_USER') %}
+            <a href="/logout" class="login" >Salir</a>
+        {% else %}
+            <a href="/login" class="login" >Identificarse</a>
+        {% endif %}
+
+    </header>
+
+{% endblock %}
+
+{% block body %}
+<div class="cajaLogin">
+
+     <div class="m">
+     <img src="/assets/img/maleteoM.png" alt="" class="logom">
+    </div>
+
+{{ form(registroForm) }}
+
+<p>Si ya tienes una cuenta <a href="/login">identificate</a></p>
+</div>
+{% endblock %}
+
+    {% block footer %}
+        <footer>
+        <picture>
+            <img src="assets/img/logo.svg" alt="" class="logoMaleteo">
+            <p>Juan Madalena <span class="icono">&#9996;</span></p>
+        </picture>
+    </footer>
+    {% endblock %}

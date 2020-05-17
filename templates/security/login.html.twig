@@ -1,14 +1,32 @@
-{% extends 'base.html.twig' %}
+{% extends "base.html.twig" %}
 
         {% block stylesheets %}
         {{ parent() }}
         <link rel="stylesheet" href="style/login.css">
         {% endblock %}
+    {% block header %}
+                <header>
+        <picture>
+            <a href="/maleteo"><img src="assets/img/logo.svg" alt="logoMaleteo" class="logoMaleteo"></a>
+        </picture>
+<div class="solicitud">
+        {% if is_granted('ROLE_ADMIN') %}
+        
+            <a href="/solicitudes" class="linkSolicitud">Solicitudes</a>
+        
+        {% endif %}
+</div>
+        {% if is_granted('ROLE_USER') %}
+            <a href="/logout" class="login" >Salir</a>
+        {% else %}
+            <a href="/login" class="login" >Identificarse</a>
+        {% endif %}
 
-{% block title %}Identificate{% endblock %}
+    </header>
+    {% endblock %}
 
 {% block body %}
-<form method="post">
+
     {% if error %}
         <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
     {% endif %}
@@ -18,17 +36,23 @@
             You are logged in as {{ app.user.username }}, <a href="{{ path('app_logout') }}">Logout</a>
         </div>
     {% endif %}
-    <div class="caja">
+<div class="container">
+    <div class="cajaLogin">
+
+     <div class="m">
+     <img src="/assets/img/maleteoM.png" alt="" class="logom">
+    </div>
+    <form method="post">
     <h1 class="h3 mb-3 font-weight-normal">Identificate</h1>
     <label for="inputEmail">Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="email" required autofocus>
+    <input placeholder="Email" type="email" value="{{ last_username }}" name="email" id="inputEmail" class="email" required autofocus>
     <label for="inputPassword">Password</label>
-    <input type="password" name="password" id="inputPassword" class="pass" required>
+    <input placeholder="*****" type="password" name="password" id="inputPassword" class="pass" required>
 
     <input type="hidden" name="_csrf_token"
            value="{{ csrf_token('authenticate') }}"
     >
-    </div>
+   
 
     {#
         Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
@@ -44,5 +68,18 @@
     <button class="btn btn-lg btn-primary" type="submit">
         Sign in
     </button>
-</form>
+    </form>
+<p>Si aun no tienes una cuenta <a href="/registro" class="registro">registrate</a></p>
+    </div>
+</div>
+
 {% endblock %}
+
+    {% block footer %}
+        <footer>
+        <picture>
+            <img src="assets/img/logo.svg" alt="" class="logoMaleteo">
+            <p>Juan Madalena <span class="icono">&#9996;</span></p>
+        </picture>
+    </footer>
+    {% endblock %}
